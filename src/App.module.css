@@ -1,0 +1,156 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(ellipse 80% 40% at 50% -10%, rgba(232,255,71,0.07) 0%, transparent 70%),
+    var(--bg);
+}
+
+/* ── HEADER ── */
+.header {
+  padding: 28px 40px 0;
+}
+.headerInner {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+}
+.logoAccent {
+  color: var(--accent);
+  font-size: 18px;
+}
+.logoText {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: #fff;
+}
+.logoSub {
+  color: var(--accent);
+}
+.tagline {
+  font-size: 11px;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.headerLine {
+  margin-top: 20px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent) 0%, transparent 60%);
+  opacity: 0.35;
+}
+
+/* ── MAIN ── */
+.main {
+  flex: 1;
+  padding: 0 40px 40px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ── UPLOAD SECTION ── */
+.uploadSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 80px;
+  gap: 32px;
+}
+.uploadHeading {
+  text-align: center;
+}
+.h1 {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.1;
+  color: #fff;
+}
+.subtitle {
+  margin-top: 12px;
+  color: var(--text-muted);
+  font-size: 13px;
+  max-width: 400px;
+}
+.error {
+  color: var(--danger);
+  font-size: 12px;
+  background: rgba(255,71,87,0.1);
+  border: 1px solid rgba(255,71,87,0.3);
+  border-radius: var(--radius);
+  padding: 10px 16px;
+}
+
+/* ── DATA SECTION ── */
+.dataSection {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.dataHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.fileInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.fileTag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+.fileIcon { font-size: 14px; }
+.resetBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 5px 12px;
+  transition: all var(--transition);
+}
+.resetBtn:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+/* ── FOOTER ── */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 11px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 600px) {
+  .header { padding: 20px 16px 0; }
+  .main { padding: 0 16px 32px; }
+  .uploadSection { padding-top: 48px; }
+  .dataHeader { flex-direction: column; align-items: flex-start; }
+}
